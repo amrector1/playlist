@@ -6,13 +6,14 @@ request.onreadystatechange = function(){
     console.log(object);
     var array = object.results
       for (var i = 0; i < 3; i++) {
-        var randomNum = array[Math.floor(Math.random()*array.length)];
+        /*var randomNum = array[Math.floor(Math.random()*array.length)];*/
 
         var image = document.createElement('img');
         image.src = "images/" + array[Math.floor(Math.random()*array.length)].cover_art;
         var body = document.getElementById('body-main');
         body.appendChild(image);
-
+        image.style.height = "250px"
+        image.style.width = "250px"
     }
   }
 }
